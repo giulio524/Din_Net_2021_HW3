@@ -79,4 +79,21 @@
     \[\hat{z} =\left(I - \beta W'\right)^{-1}\mathbbm{1}\]
     tale per cui:
     \[\hat{z}'c = \mathbbm{1}' (I - \beta W)^{-1} c =  \sum \limits_{j \in \mathbb{V}}^{} x^*_j = y.\]
+
+    %-------------------------E---------------------------------------------
+    \questionpart
+    Vale il seguente risultato:
+    \[
+    Var(y) = Var(\hat{z}'c) = \hat{z}'VarCov(c)\hat{z}    
+    \]
+    Essendo il vettore \(c\) un vettore di variabili aleatorie indipendenti:
+    \[
+    Varcov(c) = \begin{bmatrix}
+        \sigma_1^2 & & 0 \\
+         & \ddots & \\
+         0 & & \sigma_n^2
+    \end{bmatrix}    
+    \]
+    Pertanto vale:
+    \[Var(y) =  \sum \limits_{i = 1}^{n} \hat{z}_i^2 \sigma_i^2 =  \sum \limits_{i = 1}^{n} ((I - \beta W')^{-1}\mathbbm{1})_i^2 \sigma_i^2\]
 \end{alphaparts}
