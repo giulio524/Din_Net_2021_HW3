@@ -36,7 +36,7 @@
     DA INDAGARE SE ESISTONO CASI IN CUI L'EQUILIBRIO NON è UNICO
 
     La condizione:
-    \begin{equation}
+    \begin{equation}\label{eq_condition_beta}
         \beta \omega_i < 1 \quad \quad \quad \forall i \in \mathcal{V}
     \end{equation}
     impone che le righe della matrice \(\beta W\) sommino ad una quantità strettamente minore di 1. La matrice \(\beta W\) si dice pertanto essere \textit{substocastica} e il suo raggio spettrale soddisfa la condizione \(\rho(\beta W) < 1\). Può quindi essere applicato il \textit{Criterio di Neumann} che ci assicura esistenza ed unicità della matrice \((I - \beta W)^{-1}\). In particolare vale:
@@ -44,4 +44,24 @@
         (I-\beta W)^{-1} =  \sum \limits_{k=0}^{\infty} \beta^k W^k
     \end{equation}
 
+    %-----------------------------C----------------------------------
+    \questionpart
+    Come visto per il punto precedente, se esiste ed è unico, l'equilibrio di Nash del gioco è dato da:
+    \[
+        x^* = (I -\beta W)^{-1} c
+        \]
+    pertanto è nella forma \(x^* = Mc\) e dipende linearmente dal vettore c. Nel caso in cui valga \ref{eq_condition_beta} allora, per il \textit{criterio di Neumann} abbiamo:
+    \begin{equation}
+        M =  \sum \limits_{k=0}^{\infty} \beta^k W^k
+    .\end{equation}
+    Inoltre vale:
+    \begin{equation*}
+        (W^k)_{ij} = \text{ \# di path da i a j di lunghezza k} \implies (W^k)_{ij} \geq 0 \quad \forall i, j \in \mathcal{V}
+    \end{equation*}
+    Pertanto \(M\) è dato dalla somma di matrici con elementi tutti non negativi:
+    \[M_{ij} \geq 0 \quad \quad \forall i, j \in \mathcal{V}\]
+
+    %-----------------------------D-------------------------------------------
+    \questionpart
+    
 \end{alphaparts}

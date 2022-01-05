@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.14)  5 JAN 2022 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.11.14)  5 JAN 2022 11:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -841,24 +841,29 @@ Package caption Info: End \AtBeginDocument code.
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/home/giulio524/Documenti/GitHub/Din_Net_2021_HW3/Esercizi/Es1.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2] (/home/giulio524/Documenti/GitHub/Din_Net_2021_HW3/homework.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (11.0982pt too wide) detected at line 60
+\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W[]\OT1/lmr/m/n/10.95 )[] = []  =[]\OMS/lmsy/m/n/10.95 )  \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W[]\OT1/lmr/m/n/10.95 )[] \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 0 \OMS/lmsy/m/n/10.95 8\OML/lmm/m/it/10.95 i; j \OMS/lmsy/m/n/10.95 2 V
+ []
+
+) [2] (/home/giulio524/Documenti/GitHub/Din_Net_2021_HW3/homework.aux)
 Package rerunfilecheck Info: File `homework.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
 (\end occurred when \ifx on line 62 was incomplete) 
 Here is how much of TeX's memory you used:
- 26686 strings out of 479304
- 502890 string characters out of 5869778
- 1133153 words of memory out of 5000000
- 43285 multiletter control sequences out of 15000+600000
- 431451 words of font info for 58 fonts, out of 8000000 for 9000
+ 26693 strings out of 479304
+ 502965 string characters out of 5869778
+ 1133179 words of memory out of 5000000
+ 43288 multiletter control sequences out of 15000+600000
+ 437431 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,102p,3294b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on /home/giulio524/Documenti/GitHub/Din_Net_2021_HW3/homework.pdf (2 pages, 142252 bytes).
+Output written on /home/giulio524/Documenti/GitHub/Din_Net_2021_HW3/homework.pdf (2 pages, 144064 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
+ 81 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
