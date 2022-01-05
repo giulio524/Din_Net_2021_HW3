@@ -99,4 +99,14 @@
 
     %-----------------------F-------------------------------------------------
     \questionpart
+    Sia \(i_K\) il key player del gioco e sia \(W^{(- i_K)}\) la matrice di adiacenza del grafo \(\mathcal{G}^{(- i_K)}\) privato del nodo \(i_K\). Poiché la funzione di utility di ciascun nodo rimane invariata nella forma, si possono applicare gli stessi ragionamenti dei punti precedenti per trovare che esiste ed è unico l'equilibrio di Nash:
+    \[
+    x^{*(- i_K)} = (I- \beta W^{(- i_K)})^{- 1}c  
+    \]
+    per tutte le \(\beta\) che soddisfano \ref{eq_condition_beta} dal momento che la matrice \(\beta W^{(- i_K)}\) risulta substocastica. Se definiamo \(M^{(- i_K)} = (I- \beta W^{(- i_K)})^{- 1}\) allora, poiché \(c= \mathbbm{1}\), abbiamo: 
+    \begin{equation}    
+            x^{*(- i_K)} = M^{(- i_K)} \mathbbm{1}
+    \end{equation}
+    
+    
 \end{alphaparts}
