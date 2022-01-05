@@ -63,5 +63,20 @@
 
     %-----------------------------D-------------------------------------------
     \questionpart
-    
+    Il vettore di centralità di Katz del grafo è dato da:
+    \begin{equation*}
+        z = \left(I - \left(\frac{1-\beta_K}{\lambda_W}\right)W'\right)^{-1}\beta_K \mu
+    \end{equation*}
+    Abbiamo quindi il seguente risultato:
+    \[
+    z'c = \left(\left(I - \frac{1 - \beta_K}{\lambda_W}W'\right)^{-1} \beta_K \mu\right)' c = \beta_k \mu' \left(I - \frac{1 - \beta_K}{\lambda_W}W\right)^{-1}c    
+    \]
+    Ponendo quindi \footnote{L'operazione è lecita dal momento che  la matrice \(\beta W\) è substocastica. Questo vuol dire che \(\rho(\beta W) = \beta \rho(W) < 1\), pertanto \(\beta_K \in [0,1]\).}
+    \[ \frac{1 - \beta_K}{\lambda_W} = \beta \iff \beta_K = 1 - \lambda_W \beta \]
+    e
+    \[\mu = \frac{1}{1 - \lambda_W \beta} \mathbbm{1}\]
+    si ottiene un vettore di centralità di Katz:
+    \[\hat{z} =\left(I - \beta W'\right)^{-1}\mathbbm{1}\]
+    tale per cui:
+    \[\hat{z}'c = \mathbbm{1}' (I - \beta W)^{-1} c =  \sum \limits_{j \in \mathbb{V}}^{} x^*_j = y.\]
 \end{alphaparts}
