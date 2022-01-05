@@ -51,7 +51,7 @@
         x^* = (I -\beta W)^{-1} c
         \]
     pertanto è nella forma \(x^* = Mc\) e dipende linearmente dal vettore c. Nel caso in cui valga \ref{eq_condition_beta} allora, per il \textit{criterio di Neumann} abbiamo:
-    \begin{equation}
+    \begin{equation} \label{eq_neumann}
         M =  \sum \limits_{k=0}^{\infty} \beta^k W^k
     .\end{equation}
     Inoltre vale:
@@ -76,9 +76,15 @@
     e
     \[\mu = \frac{1}{1 - \lambda_W \beta} \mathbbm{1}\]
     si ottiene un vettore di centralità di Katz:
-    \[\hat{z} =\left(I - \beta W'\right)^{-1}\mathbbm{1}\]
+    
+    \begin{equation}\label{eq_zhat}
+        \hat{z} =\left(I - \beta W'\right)^{-1}\mathbbm{1}
+    \end{equation}
     tale per cui:
-    \[\hat{z}'c = \mathbbm{1}' (I - \beta W)^{-1} c =  \sum \limits_{j \in \mathbb{V}}^{} x^*_j = y.\]
+    
+    \begin{equation}\label{eq_yscalar}
+        \hat{z}'c = \mathbbm{1}' (I - \beta W)^{-1} c =  \sum \limits_{j \in \mathbb{V}}^{} x^*_j = y.
+    \end{equation}
 
     %-------------------------E---------------------------------------------
     \questionpart
@@ -108,5 +114,51 @@
             x^{*(- i_K)} = M^{(- i_K)} \mathbbm{1}
     \end{equation}
     
-    
+    %-----------------G-----------------------------------------------------
+    \questionpart
+    Per ogni \(k \neq i \neq j\) vale:
+    \begin{gather*}
+        M_{ij}M_{ik} = M_{ii}(M_{ij}-M_{ij}^{(-i)}).
+    \end{gather*}
+
+    %--------------------------H--------------------------------------------
+    \questionpart
+    Poichè il gioco è simmetrico, da \ref{eq_zhat}, si ottiene che 
+    \begin{equation}
+        \hat{z} =\left(I - \beta W\right)^{-1}\mathbbm{1} = M\mathbbm{1}
+    \end{equation}
+    Notiamo inoltre da \ref{eq_neumann} che se il gioco è simmetrico allora anche la matrice \(M\) sarà simmetrica. Utilizzando quindi \ref{eq_yscalar} si ottiene:
+    \begin{equation}
+        y = \hat{z}' c = (M\mathbbm{1})'\mathbbm{1} = \mathbbm{1}' M \mathbbm{1} =  \sum \limits_{j}  \sum \limits_{k}^{} M_{jk} 
+    \end{equation}
+    e, analogamente
+    \[
+    y^{(- i)} = \mathbbm{1}' M^{(- i)} \mathbbm{1} = \sum \limits_{j\neq i}  \sum \limits_{k \neq i}^{} M_{jk}^{(- i)}
+    .\]
+    A questo punto si ottiene:
+    \[
+    y- y^{(- i)} =   \sum \limits_{j}  \sum \limits_{k}^{} M_{jk} - \sum \limits_{j\neq i}  \sum \limits_{k \neq i}^{} M_{jk}^{(- i)} =
+    \]
+    \[
+    =  \left(\sum \limits_{j\neq i}  \sum \limits_{k \neq i}  M_{jk} -  M_{jk}^{(- i)} \right)+  \left(\sum \limits_{k \neq i}^{} M_{ik}\right) +  \left(\sum \limits_{j\neq i}^{} M_{ji} \right)+ M_{ii}
+    \]
+    Utilizzando il punto (g): \( (M_{ij}-M_{ij}^{(-i)}) = (M_{ij}M_{ik})/M_{ii}\) pertanto \footnote{Questo passaggio è sempre possibile in quanto \(M_{ii} > 0 \quad \forall i \in \mathcal{V}\). Infatti, essendo il grafo simmetrico, abbiamo che \((W^2)_{ii} > 0 \quad \forall i \in \mathcal{V}\). Il risultato segue dalla definizione di \(M\) e dal risultato ottenuto attraverso il criterio di Neumann. }
+
+    \[
+    y - y^{(- i)} = \left(\sum \limits_{j\neq i}  \sum \limits_{k \neq i} \frac{M_{ij}M_{ik}}{M_{ii}}\right) +   2 \left(  \sum \limits_{j \neq i}^{} M_{ij}\right) + M_{ii} =   
+    \]
+    \[
+    = \frac{1}{M_{ii}} \left(\sum \limits_{j\neq i}  \sum \limits_{k \neq i} M_{ij}M_{ik}\right) + 2 \left(  \sum \limits_{j}^{} M_{ij}\right) - M_{ii} =
+    \]
+    \[
+        =\frac{1}{M_{ii}} \left(  \sum \limits_{j\neq i}^{} M_{ij}  \sum \limits_{k}^{} M_{ik}- M_{ii} \sum \limits_{j\neq i}^{} M_{ij}\right) + 2 \left(  \sum \limits_{j}^{} M_{ij}\right) - M_{ii}
+    \]
+    Ora, poiché \(z_i =  \sum \limits_{j}^{} M_{ij}\) e \(  \sum \limits_{j \neq i}^{} M_{ij} = z_i - M_{ii}\), otteniamo:
+    \[
+        y - y^{(- i)} =  \frac{1}{M_{ii}} \left( \sum \limits_{j\neq i}^{} M_{ij} (z_i - M_{ii})\right) + 2z_i - M_{ii} = 
+    \]
+    \[
+    =   \frac{1}{M_{ii}} (z_i - M_{ii})^2 + 2z_i - M_{ii} = \frac{z_i^2}{M_{ii}}  
+    \]
+    Pertanto il \textit{key player} è quel giocatore \(i\) che massimizza il rapporto \(\frac{z_i^2}{M_{ii}}.\)
 \end{alphaparts}

@@ -1288,11 +1288,13 @@ INPUT c:/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm6.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm9.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm5.tfm
 INPUT homework.aux
 INPUT ./homework.out
 INPUT ./homework.out
-INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT c:/Users/giuli/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk
