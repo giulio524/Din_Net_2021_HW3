@@ -1,0 +1,74 @@
+\documentclass[11pt,largemargins]{homework}
+
+\newcommand{\hwname}{Giulio Nenna}
+\newcommand{\hwemail}{s292399@studenti.polito.it}
+\newcommand{\hwtype}{Homework}
+\newcommand{\hwnum}{1}
+\newcommand{\hwclass}{}
+\newcommand{\hwlecture}{}
+\newcommand{\hwsection}{}
+
+% This is just used to generate filler content. You don't need it in an actual
+% homework!
+\usepackage{lipsum}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{mcode}
+\usepackage{epstopdf}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{bbm}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{tikzit}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\input{Stilegrafo.tikzstyles}
+\begin{document}
+
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+\maketitle
+
+\begin{center}
+  Realizzato in collaborazione con Alessandro Bonaduce (s289906@studenti.polito.it), Davide Grande (s292174@studenti.polito.it).
+\end{center}
+
+
+\section{}% --------------ESERCIZIO 1------------------------------
+\input{Esercizi/Es1.tex}
+
+
+
+% Sometimes questions get separated from their bodies. Use a \newpage to force
+% them to wrap to the next page.
+
+  
+% Use \renewcommand{\questiontype}{<text>} to change what word is displayed
+% before numbered questions
+%\renewcommand{\questiontype}{Task}
+\end{document}

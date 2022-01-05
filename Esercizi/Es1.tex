@@ -1,0 +1,25 @@
+\begin{alphaparts}
+    %-------------------------------------A---------------------------------------
+   \questionpart
+   Date le seguenti funzioni di utilità per ciascun giocatore:
+   \[
+    u_i(x)=- \frac{x_i^2}{2}+ c_i x_i + \beta \sum\limits_{j \neq i} W_{ij}x_j x_i 
+    \]
+    trovare le funzioni di \textit{Best Response} per ciascun giocatore significa trovare le seguenti:
+
+    \[BR_i(x_{ - i}) = \arg\max_{x_i \in \mathcal{A}} u_i(x_i, x_{ - i}).\]
+
+    Poiché \(u_i(x)\) è concava rispetto a \(x_i\), trovare punti stazionari rispetto a \(x_i\) significa trovare massimi globali:
+    \[
+        \frac{\delta u_i ( x )}{\delta x_i} = -x_i + c_i + \beta  \sum \limits_{j \neq i}^{} W_{ij} x_j
+    \]
+    \[
+        \frac{\delta u_i ( x )}{\delta x_i} = 0 \quad \iff \quad x_i = c_i + \beta  \sum \limits_{j \neq i}^{} W_{ij} x_j
+    .\]
+    Pertanto:
+    \[
+        BR_i(x_{-i}) = c_i + \beta  \sum \limits_{j \neq i}^{} W_{ij}x_j 
+    .\]
+
+    
+\end{alphaparts}
