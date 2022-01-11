@@ -53,4 +53,27 @@ Siano
     \[
         g_k(z^\beta) = \frac{z_k^\beta e^1}{e^1  \sum \limits_{h}^{} z^\beta_h} = z_k \quad \quad \forall k \in \mathcal{R}\]
     Pertanto \(z^\beta\) è un punto di equilibro stabile per la ODE della dinamica \textit{mean field}.
+
+    \questionpart
+    Il vettore \(z^\beta\) soddisfa la seguente relazione:
+    \[
+        \tau_{k}(z_{k}^\beta) + z_{k}^\beta\tau'(z_{k}^\beta)\, = - \frac{1}{\beta}(\log(z_k^\beta)+ 1) \quad \forall k \in \mathcal{R}
+        \]
+    Poiché 
+    \[
+    \lim_{\beta \to \infty} \frac{1}{\beta} (\log (z^\beta_k) + 1) = 0    
+    \]
+    Allora, per \(\beta \to \infty\), il vettore \(z^\circ\) soddisfa:
+
+    \[
+        \tau_{k}(z_{k}^\circ) + z_{k}^\circ\tau'(z_{k}^\beta)= 0 .   
+    \]
+
+    A questo risultato si arriva seguendo lo stesso ragionamento del punto precedente considerando che:
+    \[
+    z^\circ = \arg\min \limits_{z \in \mathcal{P}\mathcal{R}} \left( \lim_{\beta \to \infty} V_\beta(z)\right) =   \arg\min \limits_{z \in \mathcal{P}\mathcal{R}} \Phi(z)
+    \]
+    Dal momento che \(\Phi(z) =  \sum \limits_{i}^{} z
+    _i \tau_i(z_i)\) allora \(\Phi(z)\) rappresenta l'\textit{average delay} in quanto è dato dalla somma dei delay su ciascuna strada pesati per la frazione di utenti che la utilizzano. Pertanto \(z^\circ\) minimizza l'\textit{average delay} ed è per definizione un \textit{social optimum traffic assignment}.
+   
 \end{alphaparts}
