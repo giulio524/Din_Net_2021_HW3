@@ -1,3 +1,5 @@
+\begin{alphaparts}
+\questionpart %--------A--------------
 Siano \(\mathcal{V} = \{1, \dots n\}\) gli utenti della rete stradale e sia \(\mathcal{R}\) lo spazio delle azioni.La scelta della strada da parte di ciascun utente determina una configurazione \(x \in \mathcal{R}^n\) del gioco in cui le utility sono definite nel modo seguente:
 \[
     u_i (x_i, x_{- i}) = - (\tau_{x_i}(z_{x_i}) + z_{x_i}\tau'(z_{x_i})) = : U(x_{i}, z).\]
@@ -23,3 +25,32 @@ Pertanto \(g(z)\) è una funzione così definita:
 \begin{equation*}
     g_i(z) = \frac{\exp [\beta - (\tau_{i}(z_{i}) + z_{i}\tau'(z_{i})) ]}{ \sum \limits_{j \in \mathcal{R}}^{} \exp [\beta - (\tau_{j}(z_{j}) + z_{j}\tau'(z_{j})) ]} \quad \forall i \in \mathcal{R}
 \end{equation*}
+
+\questionpart %------B----------------
+Siano
+\[
+    \Phi(z) =  \sum \limits_{i}^{} z
+    _i \tau_i(z_i) \quad \quad H(z) = -  \sum \limits_{i}^{} z_i \log z_i\]
+
+    Utilizzando le nozioni afferenti alla sezione 11.3.2 delle \textit{lecture notes} si può notare che l'esistenza della funzione \( \hat{\Phi}(z) := - \Phi(z)\) dimostra che il gioco è \textit{potenziale}. Notiamo inoltre che, essendo le funzioni di delay \(\tau_i(z_i)\) convesse allora \(\hat{\Phi}(z)\) è concava. Possiamo quindi utilizzare il lemma 11.1 delle \textit{lecture notes} che ci assicura che tutti i punti del simplesso \(\mathcal{P}(\mathcal{R})\) che rappresentano un equilibrio del limite idrodinamico sono punti stazionari della funzione 
+    \[
+     \hat{V}_\beta(z) := - V_\beta(z) = \hat{\Phi}(z) + \frac{1}{\beta}H(z).   
+    \]
+    Essendo \(\hat{V}_\beta \) strettamente concava, essa ha un unico punto stazionario. Trovarlo equivale a risolvere il problema:
+    \begin{equation*}
+        z^\beta = \arg\min \limits_{z \in \mathcal{P}(\mathcal{R})} V_\beta(z)
+    \end{equation*}
+    che può essere risolto ponendo \(\nabla V_\beta(z) = 0 \).
+    In particolare:
+    \[
+    \frac{\delta V_\beta(z)}{\delta z_k} = \tau_{k}(z_{k}) + z_{k}\tau'(z_{k})  + \frac{1}{\beta}(\log(z_k)+ 1).  
+    \]
+    Pertanto \(z^\beta\) soddisfa:
+    \[
+        V_\beta(z^\beta) = 0 \iff \tau_{k}(z_{k}^\beta) + z_{k}^\beta\tau'(z_{k}^\beta)\, = - \frac{1}{\beta}(\log(z_k^\beta)+ 1) \quad \forall k \in \mathcal{R}. 
+    \]
+    In particolare
+    \[
+        g_k(z^\beta) = \frac{z_k^\beta e^1}{e^1  \sum \limits_{h}^{} z^\beta_h} = z_k \quad \quad \forall k \in \mathcal{R}\]
+    Pertanto \(z^\beta\) è un punto di equilibro stabile per la ODE della dinamica \textit{mean field}.
+\end{alphaparts}
