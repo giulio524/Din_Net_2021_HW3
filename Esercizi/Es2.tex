@@ -1,0 +1,25 @@
+Siano \(\mathcal{V} = \{1, \dots n\}\) gli utenti della rete stradale e sia \(\mathcal{R}\) lo spazio delle azioni.La scelta della strada da parte di ciascun utente determina una configurazione \(x \in \mathcal{R}^n\) del gioco in cui le utility sono definite nel modo seguente:
+\[
+    u_i (x_i, x_{- i}) = - (\tau_{x_i}(z_{x_i}) + z_{x_i}\tau'(z_{x_i})) = : U(x_{i}, z).\]
+
+Il vettore di flusso sulle strade \(z \in \mathcal{P}(\mathcal{R})\) rappresenta in questo caso il \textit{type} del grafo. Si può inoltre notare dalla forma di \(u_i\) come esso sia solamente funzione dell'azione dell' \(i\)-esimo giocatore e del tipo del grafo, pertanto il gioco che stiamo considerando è un gioco \textit{anonimo}. Se si considera una \textit{Noisy Best Response Dynamics} sul grafo, i rate di transizione sono definiti come:
+\begin{equation*}
+    \Theta_{ik}(z) = \frac{e^{\beta U(k, z)}}{ \sum \limits_{j \in \mathcal{R}}^{} e^{\beta U(j, z)}},
+\end{equation*} 
+
+mentre il \textit{Drift Operator} \(F(z)\) può essere calcolato come segue:
+
+\[
+F_i(z) = (z_1 \Theta_{1i}(z) + \dots z_k \Theta_{ki}(z) ) - (z_i \Theta_{i1}(z) + \dots + z_i \Theta_{ik}(z) ) =
+\]
+\[ 
+ = \left(\sum \limits_{j \in \mathcal{R}}^{} z_j \Theta_{ji}(z) \right) - z_i \left( \sum \limits_{j \in \mathcal{R}}^{} \Theta_{ij}(z)\right) =    
+\]
+\[
+    = \left(\frac{e^{\beta U(i, z)}}{ \sum \limits_{j \in \mathcal{R}}^{} e^{\beta U(j, z)}}  \sum \limits_{j \in \mathcal{R}}^{} z_j \right) - z_i \left( \frac{\sum \limits_{j \in \mathcal{R}}^{} e^{\beta U(j, z)}}{ \sum \limits_{j \in \mathcal{R}}^{} e^{\beta U(j, z)}}\right) = g_i(z) - z_i.
+\]
+Pertanto \(g(z)\) è una funzione così definita:
+
+\begin{equation*}
+    g_i(z) = \frac{\exp [\beta - (\tau_{i}(z_{i}) + z_{i}\tau'(z_{i})) ]}{ \sum \limits_{j \in \mathcal{R}}^{} \exp [\beta - (\tau_{j}(z_{j}) + z_{j}\tau'(z_{j})) ]} \quad \forall i \in \mathcal{R}
+\end{equation*}

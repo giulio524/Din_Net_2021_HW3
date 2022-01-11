@@ -1290,6 +1290,10 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm6.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm9.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbm/bbm5.tfm
+INPUT ./Esercizi/Es2.tex
+INPUT Esercizi/Es2.tex
+INPUT ./Esercizi/Es2.tex
+INPUT Esercizi/Es2.tex
 INPUT homework.aux
 INPUT ./homework.out
 INPUT ./homework.out

@@ -118,7 +118,7 @@
     \questionpart
     Per ogni \(k \neq i \neq j\) vale:
     \begin{gather*}
-        M_{ij}M_{ik} = M_{ii}(M_{ij}-M_{ij}^{(-i)}).
+        M_{ij}M_{ik} = M_{ii}(M_{jk}-M_{jk}^{(-i)}).
     \end{gather*}
 
     %--------------------------H--------------------------------------------
@@ -142,7 +142,7 @@
     \[
     =  \left(\sum \limits_{j\neq i}  \sum \limits_{k \neq i}  M_{jk} -  M_{jk}^{(- i)} \right)+  \left(\sum \limits_{k \neq i}^{} M_{ik}\right) +  \left(\sum \limits_{j\neq i}^{} M_{ji} \right)+ M_{ii}
     \]
-    Utilizzando il punto (g): \( (M_{ij}-M_{ij}^{(-i)}) = (M_{ij}M_{ik})/M_{ii}\) pertanto \footnote{Questo passaggio è sempre possibile in quanto \(M_{ii} > 0 \quad \forall i \in \mathcal{V}\). Infatti, essendo il grafo simmetrico, abbiamo che \((W^2)_{ii} > 0 \quad \forall i \in \mathcal{V}\). Il risultato segue dalla definizione di \(M\) e dal risultato ottenuto attraverso il criterio di Neumann. }
+    Utilizzando il punto (g): \( (M_{jk}-M_{jk}^{(-i)}) = (M_{ij}M_{ik})/M_{ii}\) pertanto \footnote{Questo passaggio è sempre possibile in quanto \(M_{ii} > 0 \quad \forall i \in \mathcal{V}\). Infatti, essendo il grafo simmetrico, abbiamo che \((W^2)_{ii} > 0 \quad \forall i \in \mathcal{V}\). Il risultato segue dalla definizione di \(M\) e dal risultato ottenuto attraverso il criterio di Neumann. }
 
     \[
     y - y^{(- i)} = \left(\sum \limits_{j\neq i}  \sum \limits_{k \neq i} \frac{M_{ij}M_{ik}}{M_{ii}}\right) +   2 \left(  \sum \limits_{j \neq i}^{} M_{ij}\right) + M_{ii} =   
@@ -161,4 +161,5 @@
     =   \frac{1}{M_{ii}} (z_i - M_{ii})^2 + 2z_i - M_{ii} = \frac{z_i^2}{M_{ii}}  
     \]
     Pertanto il \textit{key player} è quel giocatore \(i\) che massimizza il rapporto \(\frac{z_i^2}{M_{ii}}.\)
+
 \end{alphaparts}
