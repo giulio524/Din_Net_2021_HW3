@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.4)  15 JAN 2022 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.7.4)  15 JAN 2022 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,37 +866,39 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 77.
  (c:/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [3] [4] [5] [6]) (./Esercizi/Es2.tex [7] [8]) (./Esercizi/Es3.tex [9]
-Overfull \hbox (7.37938pt too wide) detected at line 29
+Overfull \hbox (7.37938pt too wide) detected at line 39
 \U/msb/m/n/10.95 P\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X\OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.95 1\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 y[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 X\OT1/lmr/m/n/10.95 (0)) = \U/msb/m/n/10.95 P\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X\OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.95 1\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 x[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 X\OT1/lmr/m/n/10.95 (0)) = [][][]
  []
 
-LaTeX Font Info:    Calculating math sizes for size <13.13995> on input line 37.
+[10]
+LaTeX Font Info:    Calculating math sizes for size <13.13995> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <13.13995> on input line 37.
+(Font)              <13.13995> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.19792> on input line 37.
+(Font)              <9.19792> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6.56998> on input line 37.
+(Font)              <6.56998> on input line 47.
+
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <13.13995> not available
-(Font)              size <12> substituted on input line 37.
+(Font)              size <12> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <6.56998> not available
-(Font)              size <7> substituted on input line 37.
+(Font)              size <7> substituted on input line 47.
 
-LaTeX Font Info:    Calculating math sizes for size <15.76788> on input line 37.
+LaTeX Font Info:    Calculating math sizes for size <15.76788> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15.76788> on input line 37.
+(Font)              <15.76788> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11.03746> on input line 37.
+(Font)              <11.03746> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.88394> on input line 37.
+(Font)              <7.88394> on input line 47.
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.76788> not available
-(Font)              size <14.4> substituted on input line 37.
+(Font)              size <14.4> substituted on input line 47.
 
-[10]) [11] (./homework.aux)
+) [11] (./homework.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.36789pt have occurred.
@@ -914,12 +916,12 @@ Here is how much of TeX's memory you used:
  46999 multiletter control sequences out of 15000+600000
  482627 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,14n,97p,3293b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,14n,97p,3293b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <c:/Users/giuli/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk>{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on homework.pdf (11 pages, 268770 bytes).
+Output written on homework.pdf (11 pages, 269169 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
+ 205 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  37 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

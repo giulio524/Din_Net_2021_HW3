@@ -50,7 +50,7 @@
     \[
         x^* = (I -\beta W)^{-1} c
         \]
-    pertanto è nella forma \(x^* = Mc\) e dipende linearmente dal vettore c. Nel caso in cui valga \ref{eq_condition_beta} allora, per il \textit{criterio di Neumann} abbiamo:
+    pertanto è nella forma \(x^* = Mc\) e dipende linearmente dal vettore c. Nel caso in cui valga \eqref{eq_condition_beta} allora, per il \textit{criterio di Neumann} abbiamo:
     \begin{equation} \label{eq_neumann}
         M =  \sum \limits_{k=0}^{\infty} \beta^k W^k
     .\end{equation}
@@ -109,7 +109,7 @@
     \[
     x^{*(- i_K)} = (I- \beta W^{(- i_K)})^{- 1}c  
     \]
-    per tutte le \(\beta\) che soddisfano \ref{eq_condition_beta} dal momento che la matrice \(\beta W^{(- i_K)}\) risulta substocastica. Se definiamo \(M^{(- i_K)} = (I- \beta W^{(- i_K)})^{- 1}\) allora, poiché \(c= \mathbbm{1}\), abbiamo: 
+    per tutte le \(\beta\) che soddisfano \eqref{eq_condition_beta} dal momento che la matrice \(\beta W^{(- i_K)}\) risulta substocastica. Se definiamo \(M^{(- i_K)} = (I- \beta W^{(- i_K)})^{- 1}\) allora, poiché \(c= \mathbbm{1}\), abbiamo: 
     \begin{equation}    
             x^{*(- i_K)} = M^{(- i_K)} \mathbbm{1}
     \end{equation}
@@ -123,11 +123,11 @@
 
     %--------------------------H--------------------------------------------
     \questionpart
-    Poichè il gioco è simmetrico, da \ref{eq_zhat}, si ottiene che 
+    Poichè il gioco è simmetrico, da \eqref{eq_zhat}, si ottiene che 
     \begin{equation}
         \hat{z} =\left(I - \beta W\right)^{-1}\mathbbm{1} = M\mathbbm{1}
     \end{equation}
-    Notiamo inoltre da \ref{eq_neumann} che se il gioco è simmetrico allora anche la matrice \(M\) sarà simmetrica. Utilizzando quindi \ref{eq_yscalar} si ottiene:
+    Notiamo inoltre da \eqref{eq_neumann} che se il gioco è simmetrico allora anche la matrice \(M\) sarà simmetrica. Utilizzando quindi \eqref{eq_yscalar} si ottiene:
     \begin{equation}
         y = \hat{z}' c = (M\mathbbm{1})'\mathbbm{1} = \mathbbm{1}' M \mathbbm{1} =  \sum \limits_{j}  \sum \limits_{k}^{} M_{jk} 
     \end{equation}
@@ -180,7 +180,7 @@ Utilizzando i gruppi di simmetria è possibile ricavare che:
     z_6 = \theta \in \mathbb{R}^+ 
 \end{gather*}
 
-Pertanto basterà ricavare tre equazioni linearmente indipendenti dal sistema \ref{eq_sus} per trovare \(z\). Ad esempio dalla prima riga si ottiene:
+Pertanto basterà ricavare tre equazioni linearmente indipendenti dal sistema \eqref{eq_sus} per trovare \(z\). Ad esempio dalla prima riga si ottiene:
 \[z_1 = \beta(z_2+ z_3+ z_4+ z_5)+ 1 \implies (1- 2\beta)\lambda = 2\beta s + 1\]
 mentre dall'equazione sul nodo 6 abbiamo:
 \[z_6 = \beta(z_4 + z_5 + z_7 + z_8) + 1 \implies \theta = 4\beta s + 1.\]
@@ -235,5 +235,5 @@ Denominando con il pedice \(a\) i risultati calcolati utilizzando il valore \(\b
           K_a = i ,\quad   \frac{z_i^2}{M_{ii}} = 3.2811\quad \forall i \in \mathcal{V}_2 \\
           K_b = 6,\quad \frac{z_6^2}{M_{66}} = 41.666  
       \end{gather*}
-      
+
 \end{alphaparts}

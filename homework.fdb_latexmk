@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1642268472 "c:/Users/giuli/Documents/GitHub/Din_Net_2021_HW3/homework.tex" "homework.pdf" "homework" 1642268474
-  "Esercizi/Es1.tex" 1642265007 12018 c74e5d7a1d023e962090df0dad954f46 ""
+["pdflatex"] 1642269863 "c:/Users/giuli/Documents/GitHub/Din_Net_2021_HW3/homework.tex" "homework.pdf" "homework" 1642269865
+  "Esercizi/Es1.tex" 1642269861 12024 010fdd2b1989e34acef7473f92ed0259 ""
   "Esercizi/Es2.tex" 1641899383 4959 0f5c9c3824f07bd38d8fa933ba270d5f ""
-  "Esercizi/Es3.tex" 1642268310 4676 3e71819f7e2ec2563e8a8e1da5ba97c0 ""
+  "Esercizi/Es3.tex" 1642269719 4960 be3c8295dcfb3dc056d450429f138623 ""
   "Stilegrafo.tikzstyles" 1641392625 374 55192fd56fe49fed803171d98368ab87 ""
   "c:/Users/giuli/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1629466426 7808 5bd38ff2f527780fa20871438992bc7e ""
   "c:/Users/giuli/Documents/GitHub/Din_Net_2021_HW3/homework.tex" 1642268449 2505 2b1daea176fe7707e3aafc5980be8235 ""
@@ -279,14 +279,14 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1625388953 5227234 8169b85b11be64e0073b5aa9f9ec0c16 ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1625389015 2814096 c2f185a324c4ab89ca2e6b7dc489b24b ""
   "c:/texlive/2021/texmf.cnf" 1625388930 713 e69b156964470283e0530f5060668171 ""
-  "homework.aux" 1642268474 1019 9888e6d0b5099a53ef06155b494bdc71 "pdflatex"
+  "homework.aux" 1642269864 1019 9888e6d0b5099a53ef06155b494bdc71 "pdflatex"
   "homework.cls" 1641392625 5735 870888d4c585315eca3f91cc8294cf09 ""
-  "homework.out" 1642268473 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "homework.out" 1642269864 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "homework.tex" 1642268449 2505 2b1daea176fe7707e3aafc5980be8235 ""
   "mcode.sty" 1641392625 11774 e3c3290432e60d7d82bde7534454793e ""
   "tikzit.sty" 1641392625 1248 bd3a4ee1dccdce0fc641973c4461749d ""
   (generated)
   "homework.log"
-  "homework.aux"
   "homework.pdf"
   "homework.out"
+  "homework.aux"

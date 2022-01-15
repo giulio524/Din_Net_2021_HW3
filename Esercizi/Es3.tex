@@ -1,11 +1,10 @@
 
-Il fenomeno di trasmissione/guarigione della malattia nel modello SIR può essere modellato come una corsa esponenziale tra variabili aleatorie con distribuzione esponenziale di parametro $\beta$ (che rappresenta l'attivazione dell'arco tra due nodi e quindi l'infezione) e $1$ (che modellizza la mutazione spontanea da infetto a recovered).
-Per il modello SIR su un grafo con $ | V | = n$ gli stati assorbenti sono tutte e sole le configurazioni $x \in \{S,R\}^n$.
+Il fenomeno di trasmissione/guarigione della malattia nel modello SIR può essere modellato come una corsa esponenziale tra variabili aleatorie con distribuzione esponenziale di parametro $\beta$ (che rappresenta l'attivazione dell'arco tra due nodi e quindi l'infezione) e $1$ (che modellizza la mutazione spontanea da infetto a \textit{recovered}).
 
 Prendiamo ora in considerazione il caso del grafo ad anello in cui all'istante iniziale un solo nodo è infetto e tutti gli altri sono suscettibili.
 È ragionevole immaginare che non appena la malattia viene trasmessa a un nuovo nodo, dai due nuovi nodi infetti la pandemia propaghi come due dinamiche SIR indipendenti su due grafi linea.
-In particolare, nel caso in cui il primo nodo infetti il suo vicino a sinistra (il nodo $n$), i possibili stati assorbenti sono univocamente determinati dal numero di nodi recovered in ciascuna delle due dinamiche indipendenti. 
-Pertanto, se indichiamo con $l$ il numero di nodi recovered della dinamica `a sinistra' del nodo $n$ e con $r$ il numero di recovered  `a destra' del nodo iniziale, gli stati assorbenti sono nella forma:
+In particolare, nel caso in cui il primo nodo infetti il suo vicino a sinistra (il nodo $n$), i possibili stati assorbenti sono univocamente determinati dal numero di nodi \textit{recovered} in ciascuna delle due dinamiche indipendenti. 
+Pertanto, se indichiamo con $l$ il numero di nodi \textit{recovered} della dinamica `a sinistra' del nodo $n$ e con $r$ il numero di \textit{recovered}  `a destra' del nodo iniziale, gli stati assorbenti sono nella forma:
 \[
 x_{r,l} = \{ R,  \underbrace{(R,...,R)}_{r \text{ volte}},  \underbrace{(S,...,S)}_{n-r-l-2 \text{ volte}},  \underbrace{(R,...,R)}_{l \text{ volte}}, R \} \quad \quad \forall l,r \in \mathbb{N}: l+r \leq n-2.
  \]
@@ -13,8 +12,19 @@ Nel caso in cui il primo nodo infetti il suo vicino a destra gli stati assorbent
 \[
 y_{r,l} = \{ R,R,  \underbrace{(R,...,R)}_{r \text{ volte}},  \underbrace{(S,...,S)}_{n-r-l-2 \text{ volte}},  \underbrace{(R,...,R)}_{l \text{ volte}} \} \quad \quad \forall l,r \in \mathbb{N}: l+r \leq n-2.
  \]
+Osserviamo che, in base a questa definizione, alcuni di questi stati assorbenti si sovrappongono. Infatti:
+\[
+x_{r,l} = y_{r- 1, l + 1} \quad \forall r,l \geq 1.     
+\]
+ Inoltre due altri possibili stati assorbenti sono:
+ \[
+ x_0 = \{ R, S, \dots , S\},
+ \]
+ \[
+ x_n = \{R,R, \dots , R\} .       
+ \]
 
-Poiché in un grafo ad anello ogni nodo ha esattamente due vicini la probabilità che il primo nodo infetti uno dei suoi vicini è pari alla probabilità che l'orologio di Poisson dell'arco corrispondente si attivi prima di quello del nodo e prima di quello dell'altro arco.
+Poiché in un grafo ad anello ogni nodo ha esattamente due vicini la probabilità che il primo nodo infetti uno dei suoi vicini è pari alla probabilità che la corsa esponenziale tra la guarigione e i due edge sia vinta da uno dei due edge.
 Questa probabilità è dunque pari a
     \[
 	\frac{\beta}{1+2\beta}.
@@ -28,7 +38,7 @@ Poiché i numeri $r$ ed $l$ identificano univocamente uno stato assorbente, la p
 	\mathbb{P}(X(\infty)=y_{r,l} | X(0))  =\mathbb{P}(X(\infty)=x_{r,l} | X(0))  =\frac{\beta}{1+2\beta}\frac{\beta^l}{(1+\beta)^{l+1}}\frac{\beta^r}{(1+\beta)^{r+1}}
         \]
        
-       In generale possiamo immaginare uno stato assorbente definito dal numero $K$ di recovered rimanenti al termine della pandemia. Poiché non distinguiamo quale dei due nodi (a destra o a sinistra) sia stato infettato per primo la probabilità di ottenere $k$ rimossi alla fine della pandemia si scrive come
+       In generale possiamo calcolare la probabilità di finire in uno stato assorbente qualsiasi tale per cui sono presenti $K$ \textit{recovered} rimanenti al termine della pandemia. Poiché non distinguiamo quale dei due nodi (a destra o a sinistra) sia stato infettato per primo la probabilità di ottenere $k$ \textit{recovered} alla fine della pandemia si scrive come
         \[
 	\mathbb{P}(K=k)=\sum_{l+r=k-2} \mathbb{P}(X(\infty)=y_{r,l} | X(0))  +\mathbb{P}(X(\infty)=x_{r,l} | X(0))=
         \]
@@ -44,16 +54,16 @@ Poiché i numeri $r$ ed $l$ identificano univocamente uno stato assorbente, la p
 	\end{equation}
        
 
-dove in \eqref{eq_1} il termine $(k-1)$ indica il numero di modi in cui posso ottenere la quantità $k-2$ come somma di due addendi.
+dove in \eqref{eq_1} il termine $(k-1)$ indica il numero di modi in cui possiamo ottenere la quantità $k-2$ come somma di due addendi.
 
-Osserviamo che la formula vale per $k \in \lbrack 2,n-1 \rbrack $ ovvero fintantoché le dinamiche sulle due linee restano indipendenti. 
+Osserviamo che la \eqref{eq_1} vale per $k \in \lbrack 2,n-1 \rbrack $ ovvero fintantoché le dinamiche sulle due linee restano indipendenti. 
 
 Procediamo ora al calcolo di $\mathbb{P}(K=1)$ e $\mathbb{P}(K=n)$.
 
 La probabilità che un solo nodo sia colpito dalla malattia coincide con la probabilità che l'orologio di Poisson del primo nodo infetto si attivi prima degli orologi di Poisson dei due edge collegati.
-Pertanto:
+Pertanto
   \[
-		\mathbb{P}(K=1)=\frac{1}{1+2\beta}.
+		\mathbb{P}(K=1)=\mathbb{P}(X(\infty)= x_0 | X(0))=\frac{1}{1+2\beta}.
 		      \]
 
        
