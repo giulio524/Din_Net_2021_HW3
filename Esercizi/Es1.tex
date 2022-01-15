@@ -162,4 +162,78 @@
     \]
     Pertanto il \textit{key player} è quel giocatore \(i\) che massimizza il rapporto \(\frac{z_i^2}{M_{ii}}.\)
 
+\questionpart %-------------- i ---------------------------------
+Per il grafo in esame esistono tre gruppi di simmetria:
+\begin{gather*}
+    \mathcal{V}_1 = \{ 1,2,3,9,10,11\} \\
+    \mathcal{V}_2 = \{ 4,5,7,8\}\\
+    \mathcal{V}_3 = \{6\}.
+\end{gather*}
+L'obiettivo è quello di risolvere il seguente sistema lineare:
+\begin{equation} \label{eq_sus}
+    z = \beta W' z + \mathbbm{1}
+\end{equation}
+Utilizzando i gruppi di simmetria è possibile ricavare che:
+\begin{gather*}
+    z_i = \lambda \in \mathbb{R}^+ \quad \quad \forall i \in \mathcal{V}_1\\
+    z_i = s \in \mathbb{R}^+ \quad \quad \forall i \in \mathcal{V}_2\\
+    z_6 = \theta \in \mathbb{R}^+ 
+\end{gather*}
+
+Pertanto basterà ricavare tre equazioni linearmente indipendenti dal sistema \ref{eq_sus} per trovare \(z\). Ad esempio dalla prima riga si ottiene:
+\[z_1 = \beta(z_2+ z_3+ z_4+ z_5)+ 1 \implies (1- 2\beta)\lambda = 2\beta s + 1\]
+mentre dall'equazione sul nodo 6 abbiamo:
+\[z_6 = \beta(z_4 + z_5 + z_7 + z_8) + 1 \implies \theta = 4\beta s + 1.\]
+Infine, dall'equazione sul nodo 4 si ottiene:
+\[z_4 = \beta (z_1 + z_2 + z_3 + z_5 + z_6) + 1 \implies (1- \beta) s = \beta (3 \lambda + \theta) + 1.\]
+Utilizzando queste tre equazioni si ottiene il sistema ridotto:
+\[
+\begin{bmatrix}
+     1- 2\beta & - 2\beta & 0 \\
+     0 & - 4\beta & 1 \\
+    - 3\beta\lambda & 1- \beta & - \beta
+\end{bmatrix}
+\begin{bmatrix} \lambda \\ s \\ \theta \end{bmatrix} =
+\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}.     
+\]
+
+Denominando con il pedice \(a\) i risultati calcolati utilizzando il valore \(\beta = 0.1\) e con il pedice \(b\) quelli per cui \(\beta = 0.2\) si ottiene:
+\begin{align*}
+    \begin{cases}
+      \lambda_a = 1.72 \\
+      s_a = 1.87 \\
+      \theta_a = 1.75
+    \end{cases} && \begin{cases}
+      \lambda_b = 7.77 \\
+      s_b = 9.16 \\
+      \theta_b = 8.33
+    \end{cases}.
+  \end{align*}
+
+  Per quanto riguarda la matrice \(M = (I- \beta W')^{-1}\), dalle informazioni sulla simmetria è possibile ricavare:
+  \begin{gather*}
+      M_{ii} = M_\lambda \in \mathbb{R}^+\quad\quad \forall i \in \mathcal{V}_1\\
+      M_{ii} = M_s \in \mathbb{R}^+ \quad\quad \forall i \in \mathcal{V}_2\\
+      M_{6,6} = M_\theta
+      \end{gather*}
+    Calcolando si ottiene:
+    \begin{align*}
+        \begin{cases}
+          M_{\lambda_a} = 1.061 \\
+          M_{s_a} = 1.076 \\
+          M_{\theta_a }= 1.051
+        \end{cases} && \begin{cases}
+          M_{\lambda_b} = 1.851 \\
+          M_{s_b} = 2.083 \\
+          M_{\theta_b} = 1.666
+        \end{cases}.
+      \end{align*}
+
+      A questo punto è possibile individuare i \textit{key player} \(K_a\) e \(K_b\) andando a calcolare \(\arg\max \limits_{i \in \mathcal{V}} \frac{z_i^2}{M_{ii}}\).  Si ottiene:
+      
+      \begin{gather*}
+          K_a = i ,\quad   \frac{z_i^2}{M_{ii}} = 3.2811\quad \forall i \in \mathcal{V}_2 \\
+          K_b = 6,\quad \frac{z_6^2}{M_{66}} = 41.666  
+      \end{gather*}
+
 \end{alphaparts}
