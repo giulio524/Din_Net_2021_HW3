@@ -31,9 +31,15 @@
     \begin{equation*}
         x^* = (I -\beta W)^{-1} c
     .\end{equation*}
-    Questo significa che esistenza ed unicità di eventuali equilibri di Nash dipendono dalla singolarità della matrice \((I - \beta W)\): se l'inversa della matrice \((I - \beta W)\) esiste ed è unica, allora esiste ed è unico l'equilibrio di Nash \(x^*\) associato .
+    Questo significa che esistenza ed unicità di eventuali equilibri di Nash dipendono dalla singolarità della matrice \((I - \beta W)\): se l'inversa della matrice \((I - \beta W)\) esiste ed è unica, allora esiste ed è unico l'equilibrio di Nash \(x^*\) associato. Siano pertanto \(\lambda_i\) gli autovalori di \(W\), allora \(\psi_i = (1 - \beta \lambda_i)\) sono gli autovalori di \((I-\beta W)\). Affinché questa sia quindi invertibile deve valere \(\forall i \in \{1, \dots n\}\) 
+    \begin{gather*}
+      \psi_i \neq 0 \Rightarrow \beta \lambda_i \neq 1
+    \end{gather*}
+    L'equilibrio di Nash \(x^*\) esiste ed è unico se e solo se vale quindi:
+    \begin{align*}
+      \beta \neq \frac{1}{\lambda_i} && \forall \lambda_i \in \sigma(W).
+    \end{align*} 
 
-    DA INDAGARE SE ESISTONO CASI IN CUI L'EQUILIBRIO NON è UNICO
 
     La condizione:
     \begin{equation}\label{eq_condition_beta}
