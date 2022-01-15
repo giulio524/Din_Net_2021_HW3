@@ -1,0 +1,79 @@
+
+Il fenomeno di trasmissione/guarigione della malattia nel modello SIR può essere modellato come una corsa esponenziale tra variabili aleatorie con distribuzione esponenziale di parametro $\beta$ (che rappresenta l'attivazione dell'arco tra due nodi e quindi l'infezione) e $1$ (che modellizza la mutazione spontanea da infetto a recovered).
+Per il modello SIR su un grafo con $ | V | = n$ gli stati assorbenti sono tutte e sole le configurazioni $x \in \{S,R\}^n$.
+
+Prendiamo ora in considerazione il caso del grafo ad anello in cui all'istante iniziale un solo nodo è infetto e tutti gli altri sono suscettibili.
+È ragionevole immaginare che non appena la malattia viene trasmessa a un nuovo nodo, dai due nuovi nodi infetti la pandemia propaghi come due dinamiche SIR indipendenti su due grafi linea.
+In particolare, nel caso in cui il primo nodo infetti il suo vicino a sinistra (il nodo $n$), i possibili stati assorbenti sono univocamente determinati dal numero di nodi recovered in ciascuna delle due dinamiche indipendenti. 
+Pertanto, se indichiamo con $l$ il numero di nodi recovered della dinamica `a sinistra' del nodo $n$ e con $r$ il numero di recovered  `a destra' del nodo iniziale, gli stati assorbenti sono nella forma:
+\[
+x_{r,l} = \{ R,  \underbrace{(R,...,R)}_{r \text{ volte}},  \underbrace{(S,...,S)}_{n-r-l-2 \text{ volte}},  \underbrace{(R,...,R)}_{l \text{ volte}}, R \} \quad \quad \forall l,r \in \mathbb{N}: l+r \leq n-2.
+ \]
+Nel caso in cui il primo nodo infetti il suo vicino a destra gli stati assorbenti sono nella forma: 
+\[
+y_{r,l} = \{ R,R,  \underbrace{(R,...,R)}_{r \text{ volte}},  \underbrace{(S,...,S)}_{n-r-l-2 \text{ volte}},  \underbrace{(R,...,R)}_{l \text{ volte}} \} \quad \quad \forall l,r \in \mathbb{N}: l+r \leq n-2.
+ \]
+
+Poiché in un grafo ad anello ogni nodo ha esattamente due vicini la probabilità che il primo nodo infetti uno dei suoi vicini è pari alla probabilità che l'orologio di Poisson dell'arco corrispondente si attivi prima di quello del nodo e prima di quello dell'altro arco.
+Questa probabilità è dunque pari a
+    \[
+	\frac{\beta}{1+2\beta}.
+        \]
+A questo punto, utilizzando i risultati noti per il modello SIR su linea, si può calcolare la probabilità che la pandemia prosegua e si arresti dopo aver colpito altri $r$ nodi sulla linea `a destra' e $l$ nodi sulla linea `a sinistra' dei due infetti iniziali.
+    \[
+	\frac{\beta^l}{(1+\beta)^{l+1}}\frac{\beta^r}{(1+\beta)^{r+1}}
+        \]
+Poiché i numeri $r$ ed $l$ identificano univocamente uno stato assorbente, la probabilità di ingresso si calcola semplicemente come
+ \[
+	\mathbb{P}(X(\infty)=y_{r,l} | X(0))  =\mathbb{P}(X(\infty)=x_{r,l} | X(0))  =\frac{\beta}{1+2\beta}\frac{\beta^l}{(1+\beta)^{l+1}}\frac{\beta^r}{(1+\beta)^{r+1}}
+        \]
+       
+       In generale possiamo immaginare uno stato assorbente definito dal numero $K$ di recovered rimanenti al termine della pandemia. Poiché non distinguiamo quale dei due nodi (a destra o a sinistra) sia stato infettato per primo la probabilità di ottenere $k$ rimossi alla fine della pandemia si scrive come
+        \[
+	\mathbb{P}(K=k)=\sum_{l+r=k-2} \mathbb{P}(X(\infty)=y_{r,l} | X(0))  +\mathbb{P}(X(\infty)=x_{r,l} | X(0))=
+        \]
+
+                \[
+	=\mathlarger{\mathlarger{\sum}}_{l+r=k-2}\frac{2\beta}{1+2\beta}\frac{\beta^l}{(1+\beta)^{l+1}}\frac{\beta^r}{(1+\beta)^{r+1}} =
+        \]
+          \[
+	=(k-1)\frac{2\beta}{1+2\beta}\frac{\beta^{k-2}}{(1+\beta)^k}=
+        \]
+         \begin{equation}\label{eq_1}
+	=2(k-1)\frac{1}{1+2\beta}\frac{\beta^{k-1}}{(1+\beta)^k}
+	\end{equation}
+       
+
+dove in \eqref{eq_1} il termine $(k-1)$ indica il numero di modi in cui posso ottenere la quantità $k-2$ come somma di due addendi.
+
+Osserviamo che la formula vale per $k \in \lbrack 2,n-1 \rbrack $ ovvero fintantoché le dinamiche sulle due linee restano indipendenti. 
+
+Procediamo ora al calcolo di $\mathbb{P}(K=1)$ e $\mathbb{P}(K=n)$.
+
+La probabilità che un solo nodo sia colpito dalla malattia coincide con la probabilità che l'orologio di Poisson del primo nodo infetto si attivi prima degli orologi di Poisson dei due edge collegati.
+Pertanto:
+  \[
+		\mathbb{P}(K=1)=\frac{1}{1+2\beta}.
+		      \]
+
+       
+  A questo punto ricordiamo che tutti gli stati assorbenti sono globalmente raggiungibili, di conseguenza
+       \[
+		\sum_{k=1}^{n} \mathbb{P}(K=k) =1
+        \]
+	è quindi immediato ricavare che
+          \[
+		\mathbb{P}(K=n)=1-\bigg(\mathbb{P}(K=1)+\sum_{k=2}^{n-1}\mathbb{P}(K=k) \bigg) =
+        \]
+         \[
+		=1-\bigg(\frac{1}{1+2\beta}+\sum_{k=2}^{n-1}2(k-1)\frac{1}{1+2\beta}\frac{\beta^{k-1}}{(1+\beta)^k} \bigg).
+        \]
+
+
+	  
+
+
+
+
+
+
